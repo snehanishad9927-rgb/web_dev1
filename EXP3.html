@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>College Timetable</title>
+</head>
+<body>
+
+<h1>College Timetable (Example)</h1>
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <caption><strong>Semester I - Weekly Timetable</strong></caption>
+
+  <!-- Table header: time slots -->
+  <thead>
+    <tr>
+      <th scope="col">Day / Time</th>
+      <th scope="col">09:00 - 10:00</th>
+      <th scope="col">10:15 - 11:15</th>
+      <th scope="col">11:30 - 12:30</th>
+      <th scope="col">13:30 - 14:30</th>
+      <th scope="col">14:45 - 16:15</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <!-- Monday -->
+    <tr>
+      <th scope="row">Monday</th>
+      <td>Mathematics I<br><em>Room: C101</em></td>
+      <td>Physics I<br><em>Room: C102</em></td>
+      <td>Programming Basics<br><em>Room: L201</em></td>
+      <td>-- Lunch --</td>
+      <!-- Colspan example: two time slots merged for longer Lab session -->
+      <td colspan="1">Workshop (2 periods total)<br><em>Lab: Workshop-1</em></td>
+    </tr>
+
+    <!-- Tuesday -->
+    <tr>
+      <th scope="row">Tuesday</th>
+      <td rowspan="2">Engineering Drawing<br><em>Room: D110</em></td>
+      <!-- rowspan example: Engineering Drawing occupies 09:00-11:15 (two slots) -->
+      <td>Mathematics I Tutorial<br><em>Room: C101</em></td>
+      <td>Physics Lab (Demo)<br><em>Lab: P-Lab</em></td>
+      <td>-- Lunch --</td>
+      <td>Programming Lab<br><em>Lab: L201</em></td>
+    </tr>
+
+    <!-- Wednesday -->
+    <tr>
+      <th scope="row">Wednesday</th>
+      <!-- first cell for 09:00-10:00 is covered by rowspan in previous row -->
+      <td>Workshop Theory<br><em>Room: W101</em></td>
+      <td>Electrical Basics<br><em>Room: E103</em></td>
+      <td>-- Lunch --</td>
+      <td>Mathematics I (Problem Solving)<br><em>Room: C101</em></td>
+    </tr>
+
+    <!-- Thursday -->
+    <tr>
+      <th scope="row">Thursday</th>
+      <td>Physics I<br><em>Room: C102</em></td>
+      <td>Programming Basics<br><em>Room: L201</em></td>
+      <td>Mathematics I<br><em>Room: C101</em></td>
+      <td>-- Lunch --</td>
+      <!-- Nested table example inside a cell: lab schedule details -->
+      <td>
+        <table border="1" cellpadding="4" cellspacing="0">
+          <caption>Thursday Labs</caption>
+          <thead>
+            <tr>
+              <th>Lab</th>
+              <th>Batch</th>
+              <th>Room</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Programming Lab</td>
+              <td>A</td>
+              <td>L201</td>
+            </tr>
+            <tr>
+              <td>Physics Lab</td>
+              <td>B</td>
+              <td>P-Lab</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Friday -->
+    <tr>
+      <th scope="row">Friday</th>
+      <!-- Colspan example for a Guest Lecture occupying two slots -->
+      <td colspan="2">Guest Lecture: Career Guidance<br><em>Auditorium</em></td>
+      <td>Electrical Basics<br><em>Room: E103</em></td>
+      <td>-- Lunch --</td>
+      <td>Mini Project Planning (Group Work)<br><em>Room: G301</em></td>
+    </tr>
+
+    <!-- Saturday: short day, using colspan to merge last two time slots -->
+    <tr>
+      <th scope="row">Saturday</th>
+      <td>Library / Self Study</td>
+      <td>Library / Self Study</td>
+      <td>Department Meeting</td>
+      <td colspan="2">Practical Assessment (09:00 - 16:15 combined)</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Short legend for rowspan/colspan -->
+<p><strong>Notes:</strong></p>
+<ul>
+  <li><strong>rowspan</strong> is used where a class spans multiple time-slots (example: Engineering Drawing on Tue/Wed).</li>
+  <li><strong>colspan</strong> is used where a lecture or event covers multiple columns (example: Guest Lecture on Friday).</li>
+  <li>A <em>nested table</em> is shown in Thursday &rarr; last cell to list lab batch details.</li>
+</ul>
+
+</body>
+</html>
+  
